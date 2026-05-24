@@ -38,9 +38,9 @@ export default function RetiroTetelestaiPage() {
     Fazer minha inscrição
   </a>
 
-  <a href="/pagamento" className="btn btn-ghost">
-    Acompanhar pagamento
-  </a>
+  <a href="/acompanhar" className="btn btn-ghost">
+  Acompanhar pagamento
+</a>''
 </div>
           </div>
 
@@ -91,7 +91,7 @@ export default function RetiroTetelestaiPage() {
                 <span className="card-icon">📍</span>
                 <div className="card-label">Local</div>
                 <div className="card-value">Itaquacetuba-SP</div>
-                <div className="card-detail">Em breve mais detalhes</div>
+                <div className="card-detail">Cemine World</div>
               </div>
 
               <div className="card reveal d3">
@@ -253,22 +253,30 @@ export default function RetiroTetelestaiPage() {
           background: linear-gradient(90deg, transparent, var(--gold), var(--blood), var(--gold), transparent);
         }
 
-        .badge {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.5rem;
-          border: 1px solid rgba(201, 168, 76, 0.35);
-          border-radius: 999px;
-          padding: 0.45rem 1.2rem;
-          font-size: 0.82rem;
-          font-weight: 500;
-          color: var(--gold);
-          margin-bottom: 2.2rem;
-          backdrop-filter: blur(6px);
-          background: rgba(201, 168, 76, 0.07);
-          opacity: 0;
-          animation: fadeUp 0.7s 0.1s forwards;
-        }
+        .badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:16px 38px;
+
+  border-radius:999px;
+
+  border:1px solid rgba(201,168,76,.45);
+
+  color:#c9a84c;
+
+  font-size:20px;
+  font-weight:600;
+
+  min-width:420px;
+
+  margin-bottom:32px;
+
+  background:rgba(0,0,0,.18);
+
+  backdrop-filter:blur(10px);
+}
 
         .hero-title {
           font-family: "Inter", sans-serif;
