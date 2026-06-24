@@ -22,31 +22,28 @@ export default function EscolherVencimentoPage() {
     const inscricao = JSON.parse(inscricaoSalva);
 
     const dadosCompletos = {
-  codigo: inscricao.codigo,
-  nome: inscricao.nome,
-  idade: inscricao.idade,
-  whatsapp: inscricao.whatsapp,
-  igreja: inscricao.igreja,
-  responsavel: inscricao.responsavel,
-  telefoneResponsavel: inscricao.telefoneResponsavel,
-  restricao: inscricao.restricao,
-  observacao: inscricao.observacao,
-  vencimento: dia,
-};
+      codigo: inscricao.codigo,
+      nome: inscricao.nome,
+      idade: inscricao.idade,
+      whatsapp: inscricao.whatsapp,
+      igreja: inscricao.igreja,
+      responsavel: inscricao.responsavel,
+      telefoneResponsavel: inscricao.telefoneResponsavel,
+      restricao: inscricao.restricao,
+      observacao: inscricao.observacao,
+      vencimento: dia,
+    };
 
-   await fetch(
-  "https://script.google.com/macros/s/AKfycbxFo4EUuV2_Kws6-Znt8V87UJLQRH-Ft_8zmhzXURakMgiDN2JSk6PbS9KibKBVYOjk/exec",
-  {
-    method: "POST",
-    mode: "no-cors",
-    body: JSON.stringify(dadosCompletos),
-  }
-);
-    localStorage.setItem(
-      "inscricaoRetiro",
-      JSON.stringify(dadosCompletos)
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbxFo4EUuV2_Kws6-Znt8V87UJLQRH-Ft_8zmhzXURakMgiDN2JSk6PbS9KibKBVYOjk/exec",
+      {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(dadosCompletos),
+      }
     );
 
+    localStorage.setItem("inscricaoRetiro", JSON.stringify(dadosCompletos));
     localStorage.setItem("diaVencimentoRetiro", dia);
 
     window.location.href = "/";
